@@ -6,7 +6,7 @@
 /*   By: malja-fa <malja-fa@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 13:26:07 by malja-fa          #+#    #+#             */
-/*   Updated: 2024/12/02 11:09:44 by malja-fa         ###   ########.fr       */
+/*   Updated: 2024/12/03 07:19:37 by malja-fa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ long long	my_atoi(const char *str, t_list **stack_a)
 			sign = -1;
 		str++;
 	}
+	if (*str == '\0')
+		error(stack_a);
 	while (*str >= '0' && *str <= '9')
 	{
 		result *= 10;
