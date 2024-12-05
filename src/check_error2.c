@@ -6,7 +6,7 @@
 /*   By: malja-fa <malja-fa@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:37:14 by malja-fa          #+#    #+#             */
-/*   Updated: 2024/12/03 07:19:09 by malja-fa         ###   ########.fr       */
+/*   Updated: 2024/12/05 11:26:00 by malja-fa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,11 +104,16 @@ void	check2(t_list **stack_to_check, char **argv)
 	long long	num;
 
 	i = 0;
-	check_dup2(argv, stack_to_check);
 	while (argv[i])
 	{
-		num = my_atoi2(argv[i], stack_to_check, argv);
-		check_range2(num, stack_to_check, argv);
-		i++;
+		if (ft_strlen(argv[i]) > 10)
+			error2(stack_to_check, argv);
+		check_dup2(argv, stack_to_check);
+		while (argv[i])
+		{
+			num = my_atoi2(argv[i], stack_to_check, argv);
+			check_range2(num, stack_to_check, argv);
+			i++;
+		}
 	}
 }

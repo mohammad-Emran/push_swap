@@ -102,7 +102,14 @@ void	check(t_list **stack_to_check, char **argv)
 	long long	num;
 
 	i = 0;
+	while (argv[i])
+	{
+		if (ft_strlen(argv[i]) > 10)
+			error(stack_to_check);
+		i++;
+	}
 	check_dup(argv, stack_to_check);
+	i = 0;
 	while (argv[i])
 	{
 		num = my_atoi(argv[i], stack_to_check);
