@@ -6,7 +6,7 @@
 /*   By: malja-fa <malja-fa@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 13:26:07 by malja-fa          #+#    #+#             */
-/*   Updated: 2024/12/03 07:19:37 by malja-fa         ###   ########.fr       */
+/*   Updated: 2024/12/08 11:09:16 by malja-fa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ void	check(t_list **stack_to_check, char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (ft_strlen(argv[i]) > 10)
+		if (ft_strlen(argv[i]) > 12)
 			error(stack_to_check);
 		i++;
 	}
